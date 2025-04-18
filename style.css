@@ -212,6 +212,7 @@ html {
 
   .counter-text {
     font-size: 1rem;
+    padding: 0 10px;
   }
 
   .counter-img {
@@ -232,6 +233,39 @@ html {
 
   .counter-text {
     font-size: 0.95rem;
+  }
+}
+.tickcounter-container {
+  position: relative; /* Needed for absolute positioning of the flower */
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tickcounter-flower {
+  position: absolute;
+  top: -20px; /* Adjust to position above the timer */
+  right: -10px; /* Adjust to position on the right side */
+  width: 60px; /* Adjust size as needed */
+  height: auto;
+  z-index: 3; /* Ensure it appears above the timer */
+  transform: rotate(15deg); /* Optional: Adds a slight rotation */
+  opacity: 0.9; /* Optional: Adjust transparency */
+}
+
+/* Adjust flower size on larger screens */
+@media (min-width: 768px) {
+  .tickcounter-flower {
+    width: 80px;
+    top: -30px;
+    right: -15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tickcounter-flower {
+    width: 60px;
+    top: -40px;
+    right: 10px;
   }
 }
 .dress-code-section {
@@ -495,13 +529,13 @@ html {
 }
 
 .map-flower.top-left {
-  top: -10px;
+  top: -5px;
   left: -10px;
 }
 
 .map-flower.bottom-right {
-  bottom: -10px;
-  right: -90px;
+  right: -5px;
+  bottom: 78px;
 }
 
 /* Responsive adjustments */
@@ -572,8 +606,13 @@ html {
   }
 
   .map-flower.top-left {
-    top: -10px;
-    left: -10px;
+    top: -5px;
+    left: -1px;
+  }
+
+  .map-flower.bottom-right {
+    right: -1px;
+    bottom: 65px;
   }
 }
 
@@ -633,7 +672,7 @@ html {
 
 .full-width-image {
   width: 100%;
-  padding-bottom: 15px;
+  height: 450px;
   object-fit: cover;
   object-position: center;
   display: block;
@@ -648,6 +687,7 @@ html {
 
   .full-width-image {
     height: 45vh;
+    padding: 10px;
   }
 }
 
@@ -664,7 +704,7 @@ html {
   .banner-message {
     margin: 5rem 0 2rem 0;
     font-size: clamp(1.1rem, 5vw, 1.5rem);
-    padding: 0 10px;
+    padding: 30px 10px;
   }
 
   .full-width-image {
